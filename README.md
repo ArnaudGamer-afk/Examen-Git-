@@ -1,6 +1,3 @@
-Voici ton README ultra-court et punchy pour la mise à jour.
-
------
 
 # ⚡ CPU MONITOR V2
 
@@ -23,3 +20,4 @@ Grosse update. On passe du simple texte au tableau de bord.
 -----
 
 ### Veux-tu que je te fasse le fichier `.bat` pour lancer ça en un double-clic ?
+
