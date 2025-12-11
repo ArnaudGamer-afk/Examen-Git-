@@ -1,5 +1,6 @@
 Fonctionnalités
 
+
 # ⚡ CPU RAW
 
 Juste la charge proco. Pas de fioritures.
@@ -25,4 +26,16 @@ Outil de surveillance de la mémoire vive (RAM) en temps réel.
 ### Utilisation
 ```powershell
 .\RamDisplay.ps1
+
+# 💾 DISK RAW
+
+Monitoring de ton espace disque (Lecteur C:).
+
+### Fonctionnement
+* Affiche l'espace utilisé vs total.
+* 🔴 Devient ROUGE si tu as moins de 10% d'espace libre.
+
+### Lancer
+```powershell
+.\DiskDisplay.ps1
 
