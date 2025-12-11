@@ -1,31 +1,16 @@
-# Boucle infinie pour le monitoring continu
 while ($true) {
-    # Récupération du compteur de temps processeur total
+    # Récupère la charge CPU
     $cpu = (Get-Counter '\Processor(_Total)\% Processor Time').CounterSamples.CookedValue
-    
-    # Arrondi à 1 décimale
     $cpu = [math]::Round($cpu, 1)
 
-    # Définition de la couleur selon la charge
-    if ($cpu -ge 90) {
-        $color = "Red"
-    } elseif ($cpu -ge 70) {
-        $color = "Yellow"
-    } else {
-        $color = "Green"
-    }
+    # Gestion couleur
+    if ($cpu -ge 90) { $c = "Red" } elseif ($cpu -ge 70) { $c = "Yellow" } else { $c = "Green" }
 
-    # Nettoyer la console pour un effet "fixe"
+    # Affichage propre
     Clear-Host
-    
-    # Affichage
-    Write-Host "=============================" -ForegroundColor Gray
-    Write-Host "   MONITORING CPU (CTRL+C pour quitter)" -ForegroundColor Gray
-    Write-Host "=============================" -ForegroundColor Gray
+    Write-Host "=== CPU WATCHER ===" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host " Utilisation Totale : $cpu %" -ForegroundColor $color
-    Write-Host ""
+    Write-Host " Charge Actuelle : $cpu %" -ForegroundColor $c
     
-    # Pause de 1 seconde avant la prochaine mise à jour
     Start-Sleep -Seconds 1
 }
