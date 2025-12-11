@@ -1,3 +1,5 @@
+Fonctionnalités
+
 # ⚡ CPU RAW
 
 Juste la charge proco. Pas de fioritures.
@@ -9,3 +11,4 @@ Juste la charge proco. Pas de fioritures.
 ### Lancer
 ```powershell
 .\CpuDisplay.ps1
+
